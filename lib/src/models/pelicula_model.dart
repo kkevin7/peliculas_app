@@ -46,19 +46,19 @@ class Pelicula {
   });
 
   Pelicula.fromJsonMap(Map<String, dynamic> json) {
-    popularity = json['popularity'] / 1;
-    voteCount = json['vote_count'];
-    video = json['video'];
-    posterPath = json['poster_path'];
-    id = json['id'];
-    adult = json['adult'];
-    backdropPath = json['backdrop_path'];
+    voteCount        = json['vote_count'];
+    id               = json['id'];
+    video            = json['video'];
+    voteAverage      = json['vote_average'] / 1;
+    title            = json['title'];
+    popularity       = json['popularity'] / 1;
+    posterPath       = json['poster_path'];
     originalLanguage = json['original_language'];
-    originalTitle = json['original_title'];
-    genreIds = json['genre_ids'].cast<int>();
-    title = json['title'];
-    voteAverage = json['vote_average'] / 1;
-    overview = json['overview'];
-    releaseDate = json['release_date'];
+    originalTitle    = json['original_title'];
+    genreIds         = json['genre_ids'].cast<int>();
+    backdropPath     = json['backdrop_path'];
+    adult            = json['adult'];
+    overview         = json['overview'];
+    releaseDate      = json['release_date'];
   }
 }
