@@ -66,7 +66,6 @@ class Pelicula {
     if (posterPath == null) {
       return 'https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png';
     } else {
-      print(posterPath);
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
     }
   }
