@@ -2,11 +2,11 @@ class Cast {
   List<Actor> actores = new List();
   Cast.fromJsonList(List<dynamic> jsonList) {
     if (jsonList == null) return;
-    // jsonList.forEach((item) {
-    //   final actor = Actor.fromJsonMap(item);
-    // actor.add(actor)
-    // });
-    actores = jsonList.map((item) => Actor.fromJsonMap(item));
+    jsonList.forEach((item) {
+      final actor = Actor.fromJsonMap(item);
+      actores.add(actor);
+    });
+    // actores = jsonList.map((item) => Actor.fromJsonMap(item));
   }
 }
 
@@ -44,7 +44,7 @@ class Actor {
 
   getFoto() {
     if (profilePath == null) {
-      return 'https://pngimage.net/wp-content/uploads/2018/06/no-avatar-png-5.png';
+      return 'https://www.eurosegway.es/images/no-avatar-300x300.png';
     } else {
       return 'https://image.tmdb.org/t/p/w500$profilePath';
     }
