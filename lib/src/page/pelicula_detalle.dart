@@ -17,10 +17,6 @@ class PeliculaDetalle extends StatelessWidget {
             ),
             _posterTitulo(context, pelicula),
             _descripcion(pelicula),
-            _descripcion(pelicula),
-            _descripcion(pelicula),
-            _descripcion(pelicula),
-            _descripcion(pelicula),
           ]),
         )
       ],
