@@ -1,30 +1,42 @@
 import 'package:flutter/material.dart';
 
-class DataSearch extends SearchDelegate{
+class DataSearch extends SearchDelegate {
   @override
   List<Widget> buildActions(BuildContext context) {
-      // Las acciones del AppBar
-      throw UnimplementedError();
-    }
-  
-    @override
-    Widget buildLeading(BuildContext context) {
-      // Icon a la izquierda del Appbar
-      throw UnimplementedError();
-    }
-  
-    @override
-    Widget buildResults(BuildContext context) {
-      // Crea los resultados que se mostraran
-      throw UnimplementedError();
-    }
-  
-    @override
-    Widget buildSuggestions(BuildContext context) {
-    // Son las sugerencias que aparecen cuando la persona escribe
-    throw UnimplementedError();
+    // Las acciones del AppBar
+    return [
+      IconButton(
+        icon: Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+        },
+      )
+    ];
   }
 
+  @override
+  Widget buildLeading(BuildContext context) {
+    // Icon a la izquierda del Appbar
+    return IconButton(
+      icon: AnimatedIcon(
+        icon: AnimatedIcons.menu_arrow,
+        progress: transitionAnimation,
+      ),
+      onPressed: () {
+        close(context, null);
+      },
+    );
+  }
 
-  
+  @override
+  Widget buildResults(BuildContext context) {
+    // Crea los resultados que se mostraran
+    return Container();
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    // Son las sugerencias que aparecen cuando la persona escribe
+    return Container();
+  }
 }
