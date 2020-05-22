@@ -9,7 +9,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     peliculasProvider.getPopulares();
 
     return Scaffold(
@@ -20,7 +19,9 @@ class HomePage extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
-              onPressed: () {},
+              onPressed: () {
+                
+              },
             )
           ],
         ),
